@@ -1,20 +1,14 @@
 //layui模块的定义
 layui.define(["jquery"], function (exports) {
-
-
-
-
-
-
     //JavaScript代码区域
     layui.use('element', function () {
         var element = layui.element;
         var $ = layui.jquery;
 
-        // 本帅哥自己的代码!!!!
         $(".layui-nav-item dd").on("click", "a", function () {
 
             let tabId = $(this).data("menuid");
+            console.log(tabId)
             let tabTitle = $(this).data("title");
             let tabURL = $(this).data("url");
 
@@ -45,4 +39,4 @@ layui.define(["jquery"], function (exports) {
 
 
     });
-})
+});

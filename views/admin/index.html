@@ -46,15 +46,14 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-
                 <li class="layui-nav-item layui-nav-itemed">
-
                     <% menu.forEach((ele,index)=>{
                     if(ele.m_parent==0){ %>
                     <a class="" href="javascript:;"><%=ele.m_name%></a>
                     <dl class="layui-nav-child">
                         <% }else{ %>
-                        <dd><a href="javascript:;"  data-title="<%=ele.m_name%>" data-url="<%=ele.m_url%>"  data-meunid="<%=ele.m_no%>"><%=ele.m_name%></a></dd>
+                        <dd><a href="javascript:;"  data-title="<%=ele.m_name%>" data-url="<%=ele.m_url%>"
+                               data-menuid="<%=ele.m_no%>"><%=ele.m_name%></a></dd>
                         <%  } }) %>
                     </dl>
 
@@ -71,7 +70,6 @@
             <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
                 <ul class="layui-tab-title">
                     <li class="layui-this" lay-id="11">网站设置1</li>
-
                 </ul>
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show">网站设置的内容1</div>
@@ -86,14 +84,14 @@
 
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
+       &copy;nodejs server
     </div>
 </div>
 <script src="./../../admin/layui/layui.js"></script>
 <script>
     //当做script的 src去使用
     layui.config({
-        base: '../../admin/', //你存放新模块的目录，注意，不是layui的模块目录
+        base: './../../admin/', //你存放新模块的目录，注意，不是layui的模块目录
         version:"1.0.1"
     }).use('index'); //加载入口
 </script>
