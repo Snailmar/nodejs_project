@@ -49,11 +49,13 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <% menu.forEach((ele,index)=>{
                     if(ele.m_parent==0){ %>
-                    <a class="" href="javascript:;"><%=ele.m_name%></a>
+                    <a class="" href="javascript:;"><%=ele.m_name%> <i class="<%=ele.m_icon%>"></i></a>
                     <dl class="layui-nav-child">
                         <% }else{ %>
                         <dd><a href="javascript:;"  data-title="<%=ele.m_name%>" data-url="<%=ele.m_url%>"
-                               data-menuid="<%=ele.m_no%>"><%=ele.m_name%></a></dd>
+                               data-menuid="<%=ele.m_no%>"> <i class="<%=ele.m_icon%>"></i><%=ele.m_name%>
+
+                        </a></dd>
                         <%  } }) %>
                     </dl>
 
@@ -91,7 +93,7 @@
 <script>
     //当做script的 src去使用
     layui.config({
-        base: './../../admin/', //你存放新模块的目录，注意，不是layui的模块目录
+        base: '../../admin/', //你存放新模块的目录，注意，不是layui的模块目录
         version:"1.0.1"
     }).use('index'); //加载入口
 </script>

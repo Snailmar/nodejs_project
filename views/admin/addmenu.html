@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addmenu</title>
+    <link rel="stylesheet" href="./../../admin/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="./../../admin/css/addmenu.css">
+    <script src="./../../admin/layui/layui.js" charset="utf-8"></script>
+    <script src="./../../admin/js/addmenu.js"></script>
+
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+    <legend>请添加菜单</legend>
+</fieldset>
+
+<form class="layui-form"  lay-filter="example">
+    <div class="layui-form-item">
+        <label class="layui-form-label">菜单名</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_name" lay-verify="m_name" autocomplete="off" placeholder="请输入菜单名"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">路径</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_url"  autocomplete="off" placeholder="请输入路径"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">子菜单编号</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_no"  autocomplete="off" placeholder="请输入子菜单编号"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">父级菜单</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_parent"  autocomplete="off" placeholder="请输入父级菜单"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">icon</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_icon"  autocomplete="off" placeholder="请输入fonticon"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">排序</label>
+        <div class="layui-input-block">
+            <input type="text" name="m_orderby" lay-verify="m_orderby" autocomplete="off" placeholder="请输入菜单排序号"
+                   class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">状态</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="m_status" lay-skin="switch" lay-filter="m_status" lay-text="ON|OFF">
+        </div>
+    </div>
+
+
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="demo1">确认添加</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

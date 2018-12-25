@@ -35,5 +35,5 @@ app.set('view engine','html');
 app.set('views','./views');
 app.engine('html',consolidate.ejs);
 
-
+//admin路由
 app.use('/admin',adminRouter);
